@@ -1,114 +1,68 @@
-# Portfolio Website - Sk Motalib
+# SK Motalib — Portfolio
 
-## Overview
+Personal portfolio website for **SK Motalib**, a Computer Science (AI & ML) undergraduate who has interned at Microsoft and IBM and shipped 6 production AI systems.
 
-This is a comprehensive personal portfolio website for Sk Motalib, an AI & ML Engineer. The project showcases professional experience, skills, projects, and certifications through a sophisticated dark theme with AI-inspired design elements. Built with vanilla HTML, CSS, and JavaScript, it features an advanced canvas-based particle system with 100 interactive particles, neural network backgrounds, glass morphism effects, and cutting-edge visual design inspired by modern AI interfaces.
+## What This Is
 
-## User Preferences
+A recruiter-facing portfolio built with a **Neo-Brutalist × Liquid Glass** design direction — thick borders and hard shadows meet frosted glass panels with real 3D depth. No templates, no generic copy. The site demonstrates real shipped work across healthcare, civic-tech, edtech, agri-tech, and fintech AI.
 
-Preferred communication style: Simple, everyday language.
+## Key Features
 
-## System Architecture
+- **Neo-Brutalist × Liquid Glass** — intentional contrast between raw structure and frosted surfaces
+- **Mouse-tracking 3D tilt** on project cards and hero glass panel
+- **Scroll reveal animations** with `prefers-reduced-motion` support
+- **Stat counter animation** — wired to real numbers (3 internships, 9 months, 6 AI systems)
+- **Responsive** — tested at 375px, 768px, 1440px
+- **Accessible** — keyboard focus states, semantic HTML, alt text, WCAG-conscious contrast
+- **Formspree contact form** — works out of the box with your own Formspree endpoint
 
-### Frontend Architecture
-- **Pure Frontend Application**: No backend server required
-- **Static Site**: Built with vanilla HTML5, CSS3, and JavaScript ES6+
-- **Single Page Application (SPA)**: Uses hash-based navigation for smooth scrolling between sections
-- **Mobile-First Responsive Design**: Adapts to different screen sizes with CSS media queries
+## Tech Stack
 
-### Technology Stack
-- **HTML5**: Semantic markup structure
-- **CSS3**: Modern styling with Flexbox/Grid, animations, and responsive design
-- **Vanilla JavaScript**: DOM manipulation, smooth scrolling, and interactive features
-- **External Libraries**: 
-  - Google Fonts (Poppins font family)
-  - Font Awesome 6.0.0 for icons
+- HTML5
+- CSS3 (custom properties, glassmorphism, CSS Grid/Flexbox)
+- Vanilla JavaScript (no frameworks)
+- Google Fonts (Space Grotesk, DM Sans, JetBrains Mono)
+- Font Awesome 6.5.1
 
-## Key Components
+## Sections
 
-### 1. Navigation System
-- **Fixed Header**: Stays at top during scroll with backdrop blur effect
-- **Responsive Menu**: Hamburger menu for mobile devices
-- **Active Link Highlighting**: Automatically highlights current section
-- **Smooth Scrolling**: JavaScript-powered smooth navigation between sections
+1. **Hero** — Name, role, links, profile image, stat counters
+2. **About** — Bio, contact details
+3. **Skills** — Languages, AI/ML, Gen AI & LLMs, Web & Mobile, Data, Cloud & DevOps
+4. **Experience** — 3 real internships (Microsoft, IBM, COTHON/VaultofCodes/Codec)
+5. **Projects** — 6 flagship AI systems with stack and feature details
+6. **Achievements & Certifications** — Hackathons, Google programs, certifications
+7. **Education** — B.Tech CS (AI & ML), GEC Autonomous
+8. **Contact** — Working mailto/tel links, Formspree form
 
-### 2. Page Sections
-The enhanced website now includes:
-- **Home/Hero Section**: Introduction with professional profile image and social links
-- **About Section**: Personal information, contact details, and professional statistics
-- **Skills Section**: Technical competencies with animated progress bars and soft skills
-- **Experience Section**: Professional work history with interactive timeline
-- **Projects Section**: Showcase of AI/ML projects with hover effects and tech stacks
-- **Internships Section**: 3D interactive cards showcasing 8 professional internships with flip animations
-- **Education Section**: Academic background and professional certifications
-- **Contact Section**: Contact information and working contact form
+## Setup
 
-### 3. Enhanced Interactive Features
-- **Professional Profile Image**: Google Cloud Community Days attendee photo
-- **Advanced Canvas Particle System**: 100 interactive particles with mouse attraction effects and neural connections
-- **Sophisticated Dark Theme**: Professional black background with AI-inspired gradients and glass morphism
-- **Glass Effects**: Advanced backdrop blur and translucent elements throughout
-- **Neural Network Backgrounds**: Multi-layered radial gradients creating depth and sophistication
-- **Gradient Text Effects**: Dynamic color gradients on titles and key elements
-- **Enhanced Card Animations**: Sliding light effects and advanced hover transformations
-- **Mobile Menu Toggle**: Responsive hamburger menu with smooth animations
-- **Scroll-based Effects**: Dynamic navbar styling and color changes based on scroll position
-- **Section Detection**: Automatic navigation highlighting based on viewport
-- **Project Cards**: Interactive project showcase with glass effects and gradient titles
-- **3D Internships Section**: Advanced 3D flip cards with mouse tracking and auto-flip animations
-- **Counting Statistics**: Animated counters showing internship statistics
-- **Skill Progress Bars**: Animated progress indicators with staggered loading effects
-- **Loading Screen**: Professional branded loading animation
-- **Enhanced Animations**: Smooth transitions, particle effects, and neural pulse animations
-- **Tech Tag Interactions**: Hover effects on technology tags
-- **Background Particles**: Dynamic floating particles in internships section
-- **Futuristic UI Elements**: AI-themed buttons, neural pulse animations, and matrix rain effects
-- **Responsive Design**: Optimized for all device sizes with mobile-first approach
+```bash
+# Clone
+git clone https://github.com/skmotalib/Motalib_portfolio.git
+cd Motalib_portfolio
 
-## Data Flow
+# Copy environment variables (optional — only needed for contact form)
+cp .env.example .env
+# Edit .env with your Formspree endpoint
 
-### Static Content Flow
-1. **Initial Load**: HTML structure loads with CSS styling
-2. **JavaScript Enhancement**: Adds interactive behaviors after DOM load
-3. **User Interaction**: Navigation clicks trigger smooth scrolling
-4. **Scroll Events**: Update navbar appearance and active link states
+# Open in browser
+# No build step required — open index.html directly
+```
 
-### Event Handling
-- **Navigation Events**: Click handlers for menu items and mobile toggle
-- **Scroll Events**: Window scroll listeners for navbar effects and section detection
-- **Responsive Events**: CSS media queries handle layout changes
+## Contact Form
 
-## External Dependencies
+The contact form uses [Formspree](https://formspree.io). To enable it:
 
-### CDN Resources
-1. **Google Fonts**: Poppins font family (weights: 300, 400, 500, 600, 700)
-2. **Font Awesome**: Version 6.0.0 for iconography
+1. Sign up at [formspree.io](https://formspree.io)
+2. Create a new form
+3. Copy your form endpoint URL
+4. Replace the `action` URL in `index.html` line 413 with your endpoint
 
-### Browser APIs Used
-- **DOM API**: Element selection and manipulation
-- **Scroll API**: Smooth scrolling and scroll position detection
-- **Event API**: Click and scroll event handling
+## Live Demo
 
-## Deployment Strategy
+🔗 [motalib6.github.io/Motalib_portfolio](https://motalib6.github.io/Motalib_portfolio)
 
-### Static Hosting Compatible
-- **No Server Required**: Can be deployed on any static hosting service
-- **CDN Friendly**: All assets can be served from content delivery networks
-- **Fast Loading**: Minimal dependencies ensure quick page load times
+## License
 
-### Deployment Options
-1. **GitHub Pages**: Direct deployment from repository
-2. **Netlify/Vercel**: Automatic deployment with CI/CD
-3. **Traditional Web Hosting**: Simple file upload to any web server
-4. **Replit Hosting**: Can be served directly from Replit environment
-
-### Performance Considerations
-- **Lightweight**: Minimal JavaScript and CSS footprint
-- **Progressive Enhancement**: Core content accessible without JavaScript
-- **Responsive Images**: CSS handles image scaling for different devices
-- **Optimized Loading**: External resources loaded asynchronously
-
-### Browser Compatibility
-- **Modern Browsers**: Targets ES6+ compatible browsers
-- **Graceful Degradation**: Core functionality works without advanced features
-- **Mobile Optimized**: Touch-friendly interface for mobile devices
+[MIT](LICENSE)
